@@ -382,22 +382,22 @@ function myCal($number1, $number2, $operators){
         return rand( $number1, $number2 );
     }
 }
-$addition1 = myCal( 40 , 50, "+");
-$subtraction1 = myCal( 40 , 50, "+");
-$multiplication1 = myCal( 40 , 50, "*");
-$division1 = myCal( 40 , 50, "/");
-$modulus1 = myCal( 40 , 50, "%");
+$add = myCal( 20 , 10, "+");
+$sub = myCal( 20 , 10, "+");
+$multi = myCal( 20 , 10, "*");
+$divi = myCal( 20 , 10, "/");
+$modulus = myCal( 20 , 10, "%");
 $pi = myCal( "" , "", "pi");
 $abs = myCal( -100 , "", "abs");
 $sqrt = myCal( 49 , "", "sqrt");
 $round = myCal( "" , 60.5, "round");
-$rand = myCal( 20, 50, "rand");
+$rand = myCal( 20, 10, "rand");
 
-echo "Add: ". $addition1. "<br>";
-echo "Sub: ". $subtraction1. "<br>";
-echo "Multi: ". $multiplication1. "<br>";
-echo "Divi: ". $division1. "<br>";
-echo "Modulus: ". $modulus1. "<br>";
+echo "Add: ". $add. "<br>";
+echo "Sub: ". $sub. "<br>";
+echo "Multi: ". $multi. "<br>";
+echo "Divi: ". $divi. "<br>";
+echo "Modulus: ". $modulus. "<br>";
 echo "PI: ". $pi. "<br>";
 echo "Abs: ". $abs. "<br>";
 echo "Sqrt: ". $sqrt. "<br>";
