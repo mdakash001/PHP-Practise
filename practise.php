@@ -380,6 +380,8 @@ function myCal($number1, $number2, $operators){
         return round( $number2 );
     }elseif( $operators == "rand" ){
         return rand( $number1, $number2 );
+    }else{
+        echo "all is well";
     }
 }
 $add = myCal( 20 , 10, "+");
