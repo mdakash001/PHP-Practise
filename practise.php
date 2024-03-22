@@ -359,11 +359,51 @@ practiseMath('10','5','rand');
 
 echo"<br>";
 
-// $x=20;
-// $y=10;
-// if($x+$y){
-//     echo ""
-// }
+function myCal($number1, $number2, $operators){
+    if( $operators == "+" ){
+        return $number1 + $number2;
+    }elseif( $operators == "-" ){
+        return $number1 - $number2;
+    }elseif( $operators == "*" ){
+        return $number1 * $number2;
+    }elseif( $operators == "/" ){
+        return $number1 / $number2;
+    }elseif( $operators == "%" ){
+        return $number1 % $number2;
+    }elseif( $operators == "pi"){
+        return pi();
+    }elseif( $operators == "abs" ){
+        return abs( $number1 );
+    }elseif( $operators == "sqrt" ){
+        return sqrt( $number1 );
+    }elseif( $operators == "round" ){
+        return round( $number2 );
+    }elseif( $operators == "rand" ){
+        return rand( $number1, $number2 );
+    }
+}
+$addition1 = myCal( 40 , 50, "+");
+$subtraction1 = myCal( 40 , 50, "+");
+$multiplication1 = myCal( 40 , 50, "*");
+$division1 = myCal( 40 , 50, "/");
+$modulus1 = myCal( 40 , 50, "%");
+$pi = myCal( "" , "", "pi");
+$abs = myCal( -100 , "", "abs");
+$sqrt = myCal( 49 , "", "sqrt");
+$round = myCal( "" , 60.5, "round");
+$rand = myCal( 20, 50, "rand");
+
+echo "Add: ". $addition1. "<br>";
+echo "Sub: ". $subtraction1. "<br>";
+echo "Multi: ". $multiplication1. "<br>";
+echo "Divi: ". $division1. "<br>";
+echo "Modulus: ". $modulus1. "<br>";
+echo "PI: ". $pi. "<br>";
+echo "Abs: ". $abs. "<br>";
+echo "Sqrt: ". $sqrt. "<br>";
+echo "Round: ". $round. "<br>";
+echo "Rand: ". $rand. "<br>";
+
 
 
 
