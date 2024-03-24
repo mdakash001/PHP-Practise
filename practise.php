@@ -2,82 +2,138 @@
 /**
  * Plugin Name: Php Practise
  */
-function practiseMath($a,$b,$type){
+//str reples
+$str="(b)an(g)lades{h}";
+$title=['(',')','{','}'];
+$title2=['<span style="color:red;">','</span>','<span style="color:green; font-size:30px;">','</span>'];
+echo str_replace($title,$title2,$str);
+
+echo"<br>";
+
+$lorm="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+echo str_replace("Lorem","<span style='color:red;'>Lorem</span>",$lorm);
+
+echo"<br>";
+//Define
+
+define("raju","Bangladesh is beautiful country");
+echo raju;
+
+echo"<br>";
+//pi Math
+echo(pi());
+echo"<br>";
+//str lenth & word count
+$lenth="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+echo strlen($lenth);
+echo"<br>";
+
+echo str_word_count($lenth);
+echo"<br>";
+
+//Cast to String
+ $stng=25;
+ $stng =(string) $stng;
+ var_dump( $stng);
+ echo"<br>";
+//If else
+
+$text=50;
+$text2=59;
+if($text!==$text2){
+    echo "you are the best";
+}elseif($text>$text2){
+    echo "great";
+}else{
+    echo "you are bad";
+}
+
+ echo"<br>";
+ //switch case
+ $text3=98;
+ $text4=99;
+ switch( $text3){
+   case $text3:
+    echo "you are the best";
+    break;
+    case  $text4 :
+    echo "great";   
+    break;
+    default:
+    echo "you are bad";
+ }
+ echo"<br>";
+
+ //Function
+ function myMessage() {
+    echo "Hello world!";
+  }
+  myMessage();
+  echo"<br>";
+
+//  Funstion calclutor with switch
+function practiseMath($type,$a,$b){
     switch ($type){
         case "sum":
             echo $a+$b;
             break;
-            case "sub":
-                echo $a-$b;
-                break;
-                case "mul":
-                    echo $a*$b;
-                    break;
-                    case "divi":
-                        echo $a/$b;
-                        break;
-                        case "pi":
-                            echo pi();
-                            break;
-                            case "rand":
-                                echo rand();
-                                break;
-                        default: echo "This math is End";
+        case "sub":
+            echo $a-$b;
+             break;
+        case "mul":
+            echo $a*$b;
+            break;
+        case "divi":
+            echo $a/$b;
+            break;
+        case "pi":
+             echo pi();
+            break;
+        case "rand":
+            echo rand();
+            break;
+        default: echo "This math is End";
     }
 }
-practiseMath('10','5','rand');
+practiseMath('divi','10','5');
 
 echo"<br>";
 
-function myCal($number1, $number2, $operators){
-    if( $operators == "+" ){
-        return $number1 + $number2;
-    }elseif( $operators == "-" ){
-        return $number1 - $number2;
-    }elseif( $operators == "*" ){
-        return $number1 * $number2;
-    }elseif( $operators == "/" ){
-        return $number1 / $number2;
-    }elseif( $operators == "%" ){
-        return $number1 % $number2;
-    }elseif( $operators == "pi"){
-        return pi();
-    }elseif( $operators == "abs" ){
-        return abs( $number1 );
-    }elseif( $operators == "sqrt" ){
-        return sqrt( $number1 );
-    }elseif( $operators == "round" ){
-        return round( $number2 );
-    }elseif( $operators == "rand" ){
-        return rand( $number1, $number2 );
+//  Funstion calclutor with If Else
+
+function mycal($type, $x, $y){
+    if($type = "add"){
+        echo $x + $y ;
+    }elseif($type = "sub"){
+        echo $x-$y;
+    }elseif($type="mul"){
+        echo $x*$y;
+    }elseif($type="divi"){
+        echo $x/$y;
     }else{
-        echo "all is well";
+        echo "this is end";
     }
 }
-$add = myCal( 20 , 10, "+");
-$sub = myCal( 20 , 10, "+");
-$multi = myCal( 20 , 10, "*");
-$divi = myCal( 20 , 10, "/");
-$modulus = myCal( 20 , 10, "%");
-$pi = myCal( "" , "", "pi");
-$abs = myCal( -100 , "", "abs");
-$sqrt = myCal( 49 , "", "sqrt");
-$round = myCal( "" , 60.5, "round");
-$rand = myCal( 20, 10, "rand");
+mycal("add",20, 10);
+mycal("sub",20, 10);
+mycal("mul",20, 10);
+mycal("divi",20, 10);
 
-echo "Add: ". $add. "<br>";
-echo "Sub: ". $sub. "<br>";
-echo "Multi: ". $multi. "<br>";
-echo "Divi: ". $divi. "<br>";
-echo "Modulus: ". $modulus. "<br>";
-echo "PI: ". $pi. "<br>";
-echo "Abs: ". $abs. "<br>";
-echo "Sqrt: ". $sqrt. "<br>";
-echo "Round: ". $round. "<br>";
-echo "Rand: ". $rand. "<br>";
+echo"<br>";
 
+//while loop
 
+$t=1;
+while($t <= 10){
+    echo "Rajen $t <br>";
+    $t++;
+}
+echo"<br>";
 
-
+$l=10;
+while($l < 80){
+    echo $l;
+    $l +=4;
+}
 
 exit;
