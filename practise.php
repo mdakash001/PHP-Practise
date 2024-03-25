@@ -125,7 +125,7 @@ echo"<br>";
 
 $t=1;
 while($t <= 10){
-    echo "Rajen $t <br>";
+    echo "This is Rajendronath $t <br>";
     $t++;
 }
 echo"<br>";
@@ -135,5 +135,32 @@ while($l < 80){
     echo $l;
     $l +=4;
 }
+echo"<br>";
+
+$raj=1;
+while ($raj < 6) {
+    if ($raj == 3) break;
+    echo $raj;
+    $raj++;
+  }
+echo"<br>";
+
+$nur=0;
+while($nur<100){
+    $nur +=10;
+    echo "$nur <br>";
+}
+echo"<br>";
+
+//while loop calender
+
+$day=1;
+$month=9;
+$year=2024;
+while(checkdate($month,$day,$year)){
+    echo "$day-$month-$year <br>";
+    $day ++;
+}
+
 
 exit;
