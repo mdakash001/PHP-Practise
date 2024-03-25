@@ -145,6 +145,15 @@ while ($raj < 6) {
   }
 echo"<br>";
 
+$kk=1;
+while($kk<10){
+    if($kk == 7) continue;
+    echo $kk;
+    $kk++;
+}
+
+echo"<br>";
+
 $nur=0;
 while($nur<100){
     $nur +=10;
